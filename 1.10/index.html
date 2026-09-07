@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    Author: Manuel Ortiz
+    Date: 09/06/2026
+    Purpose: Portfolio Homepage using external CSS and JavaScript
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="welcomeHeading">Manuel Ortiz - Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <article>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                Hello, my name is Manuel Ortiz. I am a Project Engineer and studying web development and user experience
+                design.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Select any project below to view its GitHub repository:</p>
+
+            <div>
+                <h3>Lemonade App</h3>
+                <a href="https://github.com/mortiz407/lemonade_app" target="_blank">
+                    <img src="https://via.placeholder.com/200x120?text=Lemonade+App" alt="Lemonade App" />
+                </a>
+                <p>Interactive craft beverage recipe formulation and inventory ordering system.</p>
+            </div>
+
+            <div>
+                <h3>SDC310 Final Project</h3>
+                <a href="https://github.com/mortiz407/sdc310_final" target="_blank">
+                    <img src="https://via.placeholder.com/200x120?text=SDC310+Final" alt="SDC310 Final" />
+                </a>
+                <p>Database-driven web application with CRUD operations and user authentication.</p>
+            </div>
+
+            <div>
+                <h3>SDC230L Project</h3>
+                <a href="https://github.com/mortiz407/sdc230L_project" target="_blank">
+                    <img src="https://via.placeholder.com/200x120?text=SDC230L+Project" alt="SDC230L Project" />
+                </a>
+                <p>Structured programming coursework covering object-oriented architecture and algorithms.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <fieldset>
+                    <legend><span>Send a Message</span></legend>
+
+                    <label for="senderName">
+                        Sender Name
+                        <input type="text" id="senderName" required />
+                    </label>
+
+                    <label for="senderAddress">
+                        Sender Address (Email)
+                        <input type="email" id="senderAddress" required />
+                    </label>
+
+                    <label for="subject">
+                        Subject
+                        <input type="text" id="subject" required />
+                    </label>
+
+                    <label for="message">
+                        Message
+                        <textarea id="message" rows="4" cols="30" required></textarea>
+                    </label>
+
+                    <input type="submit" id="submit" value="Submit" />
+                </fieldset>
+            </form>
+        </section>
+    </article>
+
+    <!-- External script tag linking to manort.js -->
+    <script src="manort.js"></script>
+</body>
+
+</html>
