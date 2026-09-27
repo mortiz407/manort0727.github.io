@@ -1,0 +1,105 @@
+/* ================= Modal Window Styles ================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Semi-transparent backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 85%;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+#closeModalBtn {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#closeModalBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Modal dark mode styling */
+body.dark-mode .modal-content {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-mode #closeModalBtn {
+    background-color: #0056b3;
+}
+
+/* ================= Submit Button Tooltip ================= */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 180px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 0.85em;
+    font-weight: normal;
+
+    /* Position above submit button */
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: opacity 0.25s ease-in-out;
+}
+
+/* Tooltip arrow pointer */
+.tooltip-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333333 transparent transparent transparent;
+}
+
+/* Show tooltip on button hover */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
