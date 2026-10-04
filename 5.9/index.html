@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    Author: Manuel Ortiz
+    Date: 10/04/2026
+    Purpose: My portfolio page. Shows off my work, lets users toggle dark mode, and loads project cards from browser storage.
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+
+    <!-- Pop-up welcome message -->
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Welcome</h2>
+            <p>This page is a work in progress.</p>
+            <button id="closeModalBtn" type="button">Close</button>
+        </div>
+    </div>
+
+    <!-- Toggle switch for light/dark mode -->
+    <div class="theme-switch-wrapper">
+        <label for="darkModeToggle">
+            <input type="checkbox" id="darkModeToggle" />
+            Dark Mode
+        </label>
+    </div>
+
+    <header>
+        <h1 id="welcomeHeading">Manuel Ortiz - Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#featured">Featured Content</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <article>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                Hello, my name is Manuel Ortiz. I am a Project Engineer and studying web development and user experience
+                design.
+            </p>
+            <h3>Skills & Technologies</h3>
+            <ul id="skillsList"></ul>
+        </section>
+
+        <!-- Featured Section -->
+        <section id="featured">
+            <h2>Featured Content</h2>
+
+            <div id="universityResources" class="featured-box">
+                <h3>University Resources</h3>
+                <p>Visit the official ECPI University program page:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.ecpi.edu" target="_blank" rel="noopener noreferrer">ECPI Program Home Page</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="personalProjects" class="featured-box">
+                <h3>Personal Projects</h3>
+                <p>Explore my personal repositories:</p>
+                <div class="featured-project-links">
+                    <a href="https://github.com/mortiz407/lemonade_app" target="_blank">
+                        <img src="https://via.placeholder.com/150x90?text=Lemonade+App" alt="Lemonade App Project" />
+                    </a>
+                    <a href="https://github.com/mortiz407/sdc310_final" target="_blank">
+                        <img src="https://via.placeholder.com/150x90?text=SDC310+Final" alt="SDC310 Final Project" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section that JavaScript fills in -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Select any project below to view its GitHub repository:</p>
+            <div id="projectsContainer"></div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <fieldset>
+                    <legend><span>Send a Message</span></legend>
+
+                    <label for="senderName">
+                        Sender Name
+                        <input type="text" id="senderName" required />
+                    </label>
+
+                    <label for="senderAddress">
+                        Sender Address (Email)
+                        <input type="email" id="senderAddress" required />
+                    </label>
+
+                    <label for="subject">
+                        Subject
+                        <input type="text" id="subject" required />
+                    </label>
+
+                    <label for="message">
+                        Message
+                        <textarea id="message" rows="4" cols="30" required></textarea>
+                    </label>
+
+                    <div class="tooltip-container">
+                        <input type="submit" id="submit" value="Submit" />
+                        <span class="tooltip-text">Click to send your message!</span>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </article>
+
+    <script src="manort.js"></script>
+</body>
+
+</html>
